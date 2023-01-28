@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Teste de inicio de livro</title>
+  <link rel="stylesheet" href="resources/styles/styles.css" />
 </head>
 <body lang="pt-BR" >
 <!-- Metadados acessibilidade-->
@@ -17,8 +18,22 @@
     <header>
       <p role="doc-pagebreak" aria-label="Página 1"> Página 1</p>
     </header>
+
+    <!-- Texte de sumário navegação com leitor de tela -->
     <h1>Sumário</h1>
     <ul>
+      <li><p role="heading" aria-level="2">Vamos começar</p></li>
+      <li><p role="heading" aria-level="2">Capítulo 1 - nome do capítulo</p>
+          <ul>
+              <li><p role="heading" aria-level="3">Subitem 1</p></li>
+              <li><p role="heading" aria-level="3">Subitm 2</p></li>
+          </ul>
+      </li>
+      <li><p role="heading" aria-level="2">Capítulo 2 - nome do capítulo</p></li>
+     </ul>
+
+
+    <!-- <ul>
       <li><a href="">Vamos começar</a>
         <ol start="1" type="1">
           <li><a href=""><h2>Capitulo 1</h2></a></li>
@@ -42,13 +57,13 @@
       <li><a href="">Vamos concluir</a></li>
       <li><a href="">Referências</a></li>
       <li><a href="">Créditos de imagens</a></li>
-    </ul>
+    </ul> -->
 
 
     <!--Livro do aluno-->
     <div class="box_aluno" role="region" aria-label="Conteúdo da página">
       
-
+      <!-- Teste de leitura do MathML com role="math" -->
       <p role="math" aria-label="C={ b,i,o}">
         <math alttext="C={ b,i,o}" displaystyle="true" id="mathml_id_13456374600pnl"
 xmlns="http://www.w3.org/1998/Math/MathML">
@@ -71,7 +86,7 @@ xmlns="http://www.w3.org/1998/Math/MathML">
 </mrow>
 </mrow>
 </mrow>
-</math>
+        </math>
       </p>
 
       <div role="math" aria-label="Modelo C={ b,i,o}">
@@ -96,10 +111,14 @@ xmlns="http://www.w3.org/1998/Math/MathML">
 </mrow>
 </mrow>
 </mrow>
-</math>
+      </math>
       </div>
 
-    <p>Formatar um trabalho acadêmico nas normas da ABNT<sup id="notarodape_12345_termo"><a href="#notarodape_12345_nota" aria-label="Ir para nota de rodapé" title="Ir para nota de rodapé">1</a></sup> (a Associação Brasileira de Normas Técnicas) pode ser confuso.</p>
+
+      <!-- TODO: Teste de glossário navegação -->
+
+      <!-- Teste de nota de rodapé -->
+    <p>Formatar um trabalho acadêmico nas normas da ABNT<sup id="notarodape_12345_termo" role="doc-noteref"><a href="#notarodape_12345_nota" aria-label="Ir para nota de rodapé" title="Ir para nota de rodapé">1</a></sup> (a Associação Brasileira de Normas Técnicas) pode ser confuso.</p>
 
       <footer role="doc-footnote" aria-label="Nota de rodapé" >
         <p>
@@ -107,6 +126,16 @@ xmlns="http://www.w3.org/1998/Math/MathML">
           Trata-se da sigla para Associação Brasileira de Normas Técnicas, um órgão fundado em 1940 cuja função é administrar a normalização técnica no Brasil, em diversos setores. <a href="#notarodape_12345_termo" aria-label="Voltar ao texto de origem" title="Voltar ao texto de origem">&#8624;</a>
         </p>
       </footer>
+
+      <p>Formatar um trabalho acadêmico nas normas da ABNT<sup id="notarodape_12346_termo" role="doc-noteref"><a href="#notarodape_12346_nota" aria-label="Ir para nota de rodapé" title="Ir para nota de rodapé">1</a></sup> (a Associação Brasileira de Normas Técnicas) pode ser confuso.</p>
+
+      <footer role="doc-footnote" aria-label="Nota de rodapé" >
+        <p>
+          <sup id="notarodape_12346_nota"><a href="#notarodape_12346_termo" aria-label="Voltar ao texto de origem. Nota 1.">1</a></sup> 
+          Trata-se da sigla para Associação Brasileira de Normas Técnicas, um órgão fundado em 1940 cuja função é administrar a normalização técnica no Brasil, em diversos setores. <a href="#notarodape_12346_termo" aria-label="Voltar ao texto de origem" title="Voltar ao texto de origem">&#8624;</a>
+        </p>
+      </footer>
+
 
 
     </div>
@@ -139,15 +168,17 @@ xmlns="http://www.w3.org/1998/Math/MathML">
     <!--Livro do aluno-->
     <div class="box_aluno" role="region" aria-label="Conteúdo da página">
       
-    <p>Formatar um trabalho acadêmico nas normas da ABNT<sup id="notarodape_12346_termo"><a href="#notarodape_12346_nota" aria-label="Ir para nota de rodapé" title="Ir para nota de rodapé">1</a></sup> (a Associação Brasileira de Normas Técnicas) pode ser confuso.</p>
+      <h2>Referências Bibliograficas</h2>
 
-      <footer role="doc-footnote" aria-label="Nota de rodapé" >
-        <p>
-          <sup id="notarodape_12346_nota"><a href="#notarodape_12346_termo" aria-label="Voltar ao texto de origem. Nota 1.">1</a></sup> 
-          Trata-se da sigla para Associação Brasileira de Normas Técnicas, um órgão fundado em 1940 cuja função é administrar a normalização técnica no Brasil, em diversos setores. <a href="#notarodape_12346_termo" aria-label="Voltar ao texto de origem" title="Voltar ao texto de origem">&#8624;</a>
-        </p>
-      </footer>
-
+      <ol role="doc-bibliography">
+        <li>
+          <p role="doc-biblioref">BARBOSA, Carlos Alberto. SANTANA, Claudia de Alcântara. História da arte moderna, 1ª edição. Recife: Editora Even3, 2017.</p>
+        </li>
+        <li><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nulla dolores tempore eius. Ipsum expedita similique commodi natus, sint hic nobis voluptatibus ducimus? Quo sit quidem illum molestiae neque. Incidunt.</p></li>
+        <li></li>
+        <li></li>
+      </ol>
+   
 
     </div>
     <!--Livro do aluno-->
